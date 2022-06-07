@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
 
-function App() {
+import ControlPanel from "./components/ControlPanel.jsx";
+import MatchedPlaces from "./components/MatchedPlaces.jsx";
+import { getPlaces } from "./services/placesService.js";
+
+class App extends React.Component {
+state ={
+  menuItems: []
+}
+
+  componentDidMount(){
+    let menuItems =[]
+  }
+
+  render(){
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        
           Learn React
-        </a>
       </header>
     </div>
   );
+  }
 }
 
 export default App;
