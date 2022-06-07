@@ -1,0 +1,66 @@
+h1{
+    color: black;
+}
+table, td, th {
+    border: solid thin gray;
+    border-collapse: collapse;
+}
+
+td,th {
+    padding: 10px;
+}
+
+tr:not(:first-child):hover {
+    background-color: lightgreen;
+}
+
+.selected {
+    background-color: yellow;
+}
+
+#input_panel {
+    border: dashed thin black;
+    background-color: aliceblue;
+    margin: 1em 0;
+    padding: 20px;
+}
+
+.inputLabel {
+    width: 100px;
+    float: left;
+}
+
+#buttonPanel {
+    margin: 0.5em 0;
+}
+.show{
+    display: inline;
+}
+.hidden {
+    display: none;
+}
+.default{
+    color: black !important;
+    border: solid thin rgb(0, 0, 0) !important;
+    border-radius: 10px !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navBtn{
+    color: black !important;
+    border: solid thin rgb(0, 0, 0) !important;
+    border-radius: 10px !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navBtn:hover{
+    background-color: rgba(44, 184, 126, 0.377);
+    color: black;
+}
+label{
+    margin-right: 2rem;
+    height: 30px;
+}
+#cat{
+    height: 38px;
+}
