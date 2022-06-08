@@ -22,7 +22,7 @@ exports.updateItem = updateItem;
  * @throws {Error} if a database error occurs
  * @returns {Promise<array<MenuItem>>} resolves to: an array of MenuItem objects (empty if there are none)
  */
-async function getAllItems() {
+export async function getAllItems() {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client
@@ -58,7 +58,7 @@ async function getAllItems() {
  * @throws {Error} if a database error occurs
  * @returns {Promise<boolean>} resolves to: true if the item exists; false otherwise
  */
-async function itemExists(item) {
+ export async function itemExists(item) {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client
@@ -81,7 +81,7 @@ async function itemExists(item) {
  * @throws {Error} if a database error occurs
  * @returns {Promise<MenuItem>} resolves to: the matching MenuItem object; or null if the object doesn't exist
  */
-async function getItemByID(itemID) {
+ export async function getItemByID(itemID) {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client
@@ -114,7 +114,7 @@ async function getItemByID(itemID) {
  * @throws {Error} if a database error occurs
  * @returns {Promise<boolean>} resolves to: true if the item was added; false if the item already exists.
  */
-async function addItem(item) {
+ export async function addItem(item) {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client
@@ -143,7 +143,7 @@ async function addItem(item) {
  * @throws {Error} if a database error occurs
  * @returns {Promise<boolean>} resolves to: true if the item was deleted; false if the item doesn't exist.
  */
-async function deleteItem(item) {
+ export async function deleteItem(item) {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client
@@ -167,7 +167,7 @@ async function deleteItem(item) {
  * @throws {Error} if a database error occurs
  * @returns {Promise<boolean>} resolves to: true if the item was updated; false if the item doesn't exist.
  */
-async function updateItem(item) {
+ export async function updateItem(item) {
     try {
         let client = await ConnectionManager.getConnection();
         let collection = client

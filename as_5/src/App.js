@@ -1,18 +1,19 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
+import * as acc from "../db/MenuItemAccessor";
 
-import ControlPanel from "./components/ControlPanel.jsx";
-import MatchedPlaces from "./components/MatchedPlaces.jsx";
-import { getPlaces } from "./services/placesService.js";
+
 
 class App extends React.Component {
-state ={
-  menuItems: []
-}
+  state ={
+    menuItems: []
+  }
 
-  componentDidMount(){
-    let menuItems =[]
+  async componentDidMount(){
+    let items = await acc.getAllItems();
+        //objects[0].selected = true;
+        this.setState({ menuItems: items });
   }
 
   render(){
