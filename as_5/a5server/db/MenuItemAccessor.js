@@ -130,7 +130,7 @@ async function addItem(item) {
         }
         return res;
     } catch (err) {
-        throw new Error("Could not complete addItem!\n" + err.message);
+        throw new Error("Could not complete addItem! " + err.message);
     } finally {
         await ConnectionManager.closeConnection();
     }
@@ -154,7 +154,7 @@ async function deleteItem(item) {
         let res = result.deletedCount === 1;
         return res;
     } catch (err) {
-        throw new Error("Could not complete deleteItem!\n" + err.message);
+        throw new Error("Could not complete deleteItem! " + err.message);
     } finally {
         await ConnectionManager.closeConnection();
     }
@@ -194,7 +194,7 @@ async function updateItem(item) {
         }
         return res;
     } catch (err) {
-        throw new Error("Could not complete updateItem!\n" + err.message);
+        throw new Error("Could not complete updateItem! " + err.message);
     } finally {
         await ConnectionManager.closeConnection();
     }

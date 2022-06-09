@@ -43,3 +43,43 @@
   padding: 20px;
   color: black;
 }
+.hidden{
+  display: none;
+}
+.selected {
+  background-color: yellow;
+}
+
+#headerButtons{
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btnSize{
+  width: 6rem !important;
+}
+table, td, th {
+  border: solid thin gray !important;
+  border-collapse: collapse !important;
+}
+
+td,th {
+  padding: 10px !important;
+}
+
+.tableRow:hover {
+  background-color: lightgreen;
+}
+.drop{
+  width: 15rem !important;
+}
+.panelButton{
+  width: 6rem !important;
+  margin: auto;
+  border-radius: 7px;
+}
+.btnSelected{
+  background-color: #00e961 !important;
+  border: solid #00e961 thin !important;
+}

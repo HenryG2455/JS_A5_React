@@ -53,7 +53,7 @@ app.put("/api/menuitems/:id(\\d{3})", async (request, response) => {
               .json({ err: `item ${item.id} does not exist`, data: null });
       }
   } catch (err) {
-      response.status(500).json({ err: "update aborted" + err, data: null });
+      response.status(500).json({ err: "update aborted " + err, data: null });
   }
 });
 

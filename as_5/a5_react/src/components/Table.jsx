@@ -16,10 +16,9 @@ class Table extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(this.props.data)}
             {this.props.data.map((p) => {
                 return (
-                  <tr key ={p.id}>
+                  <tr key ={p.id} className="tableRow" id={p.id} onClick={()=>this.props.onRowClick(p)}>
                     <td>{p.id}</td>
                     <td>{p.category}</td>
                     <td>{p.description}</td>
